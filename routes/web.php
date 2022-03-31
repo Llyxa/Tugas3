@@ -15,10 +15,10 @@ use App\Http\Controllers\HotelController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('/home', [HotelController::class, 'index'])->name('home');
+/*Route::get('/home', [HotelController::class, 'index'])->name('home'); /*index adalah nama function(?) */
 Route::get('/hotels', [HotelController::class, 'hotels'])->name('hotels');
 Route::get('/tambah', [HotelController::class, 'tambah'])->name('tambah');
 Route::post('/insertdata', [HotelController::class, 'insertdata'])->name('insertdata');

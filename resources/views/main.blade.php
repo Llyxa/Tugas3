@@ -8,7 +8,8 @@
     <!-- Style footer -->
     <style>
         body{
-            background-color: #0B1017;
+            background-color: #000000;
+            font-family: sans-serif;
         }
         a{
             text-decoration: none; 
@@ -24,33 +25,32 @@
             list-style: none; display: inline;
         }
         li a{
-            background: #222; color:#d4d4d4;
+            background: #1b1b1b; color:#d4d4d4;
         }
         li a:hover{
             color:#fff;
         }
         .navi{
-            background: #222; 
+            background: #1b1b1b; 
             height: 50px;
             padding: 10px;
         }
-        hr { 
-            display: block;
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-            margin-left: auto;
-            margin-right: auto;
-            border-style: inset;
-            border-width: 1px;
-        } 
+
+        li .list{
+            font-size: 18px;
+            padding: 11px;
+        }
+        li .hotelio{
+            font-size: 25px;
+        }
     </style>
 
   </head>
   <body>
     <nav class="navi">
         <ul>
-            <li><a href="/home">HOTELIO</a></li>
-            <li><a href="/hotels">List</a></li>
+            <li><a href="/home" class="hotelio">HOTELIO</a></li>
+            <li><a href="/hotels" class="list">List</a></li>
         </ul>
     </nav>
 

@@ -24,8 +24,13 @@ class HotelController extends Controller
     }
 
     public function insertdata(Request $request){
-        Hotel::create($request->all());
-        return redirect()->route('hotels')->with('berhasil', 'Hotel baru berhasil ditambahkan.');
+        $data = Hotel::create($request->all());
+        if($request->hasFile('image')){
+            $request->file('image')->move('iniimg/', $request->file('image')->getClientOriginalName());
+            $data->image = $request->file('image')->getClientOriginalName();
+            $data->save();
+        }
+        return redirect()->route('hotels')->with('success ',' Data Berhasi di Tambahkan. ');
     }
 
     public function tampilkandata($id){
